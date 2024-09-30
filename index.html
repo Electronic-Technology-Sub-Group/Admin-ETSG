@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/site.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Vue + TS</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts">
+        // 创建一个新的 <script> 元素
+        const script = document.createElement('script')
+        // 判断当前环境是否为开发环境
+        if (import.meta.env.DEV) {
+            // 如果是开发环境，则使用环境变量指定的 SVG 图标的地址
+            script.src = import.meta.env.VITE_SVG_ICON
+        } else {
+            // 如果不是开发环境，则使用默认的图标文件，也即是在生成环境及演示服环境下使用
+            script.src = '/icon.js'
+        }
+        document.body.appendChild(script)
+    </script>
+  </body>
+</html>
