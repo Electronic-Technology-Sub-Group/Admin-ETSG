@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const message = 'Hello World!';
 </script>
 
 <template>
@@ -7,6 +8,4 @@
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
